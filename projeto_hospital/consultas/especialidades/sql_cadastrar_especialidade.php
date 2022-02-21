@@ -28,11 +28,11 @@
     if(!$valida_cadastro_especialidade){
         //CRIANDO SESSAO MENSAGEM
         $_SESSION['msg_execucao'] = 'Erro no cadastro especialidade.';        
-        header('Location: ../../especialidade.php');
+        header('Location: ../../especialidades.php');
     }else{
         //CRIANDO SESSAO MENSAGEM
         $_SESSION['msg_execucao'] = 'Especialidade cadastrado com sucesso!';   
-        header('Location: ../../especialidade.php');
+        header('Location: ../../especialidades.php');
     }
 
 

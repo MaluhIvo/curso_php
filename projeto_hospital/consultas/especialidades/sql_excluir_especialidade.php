@@ -24,11 +24,11 @@
     if(!$valida_exclusao_especialidade){
         //CRIANDO SESSAO MENSAGEM
         $_SESSION['msg_execucao'] = 'Erro na exclusão do especialidade.';        
-        header('Location: ../../especialidade.php');
+        header('Location: ../../especialidades.php');
     }else{
         //CRIANDO SESSAO MENSAGEM
-        $_SESSION['msg_execucao'] = 'Especialidade excluido com sucesso!';   
-        header('Location: ../../especialidade.php');
+        $_SESSION['msg_execucao'] = 'Especialidade excluida com sucesso!';   
+        header('Location: ../../especialidades.php');
     }
 
 

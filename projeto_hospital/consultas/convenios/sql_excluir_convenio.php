@@ -11,8 +11,8 @@
     //BUSCANDO DADOS DO CONVENIO VIA _POST
     $var_cd_convenio = $_POST['frm_cd_convenio'];    
 
-    //PRIMEIRO PASSO PARA INSERIR DADOS
-    //FAZER A CONSULTA DO INSERT
+    //PRIMEIRO PASSO PARA DELETAR OS DADOS
+    //FAZER A CONSULTA DO DELETE
     $excluir_convenios = "DELETE FROM hospital.CONVENIO WHERE cd_convenio = '$var_cd_convenio'";
 
     //SEGUNDO PASSO

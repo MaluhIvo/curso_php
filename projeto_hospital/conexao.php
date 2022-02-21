@@ -13,6 +13,7 @@
   if($conexao->connect_error){
     //EXIBINDO O ERRO
     echo 'Erro na conexão: ' . $conexao->connect_error;
+    //echo 'OOOps ocorreu um erro inesperado. Cod: 001';
   }else{
     //echo 'Conectado com sucesso!';
   }

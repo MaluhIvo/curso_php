@@ -31,15 +31,15 @@ Bem vindo a página de especialidade!
 
 ?>
 
-<!-- FORM PARA CADASTRAR CONVENIO -->
+<!-- FORM PARA CADASTRAR ESPECIALIDADE -->
 
-<form method="POST" action="consultas/especialidade/sql_cadastrar_especialidade.php"> 
+<form method="POST" action="consultas/especialidades/sql_cadastrar_especialidade.php"> 
     <div class="row">
         <div class="col-4">
-            <input class="form-control" type="text" name="frm_nome_especilidade" placeholder="Especialidade" required>
+            <input class="form-control" type="text" name="frm_nome_especialidade" placeholder="Especialidade" required>
         </div> 
         <div class="col-2">
-            <input class="form-control" type="number" name="frm_sn_sus" placeholder="Codigo" required>
+            <input class="form-control" type="text" name="frm_sn_sus" placeholder="SUS" required>
         </div>  
         <div class="col-1">
             <button class="btn btn-primary" type="submit"> <i class="fas fa-plus"></i> </button>
@@ -62,7 +62,7 @@ Bem vindo a página de especialidade!
     <?php
 
         //BUSCANDO DADOS DO BANCO DE DADOS
-        include 'consultas/especialidade/sql_consultar_especialidade.php';
+        include 'consultas/especialidades/sql_consultar_especialidades.php';
 
         //ESSE INCLUDE VAI ALIMENTAR A VARIAVEL $resultado_convenios
         //COM TODOS OS DADOS DOS CONVENIOS
@@ -79,7 +79,7 @@ Bem vindo a página de especialidade!
 
               <!--FORM PARA EXCLUIR CONVENIO-->
               
-              <form method="POST" action="consultas/especialidade/sql_excluir_especialidade.php">  
+              <form method="POST" action="consultas/especialidades/sql_excluir_especialidade.php">  
 
                 <input class="form-control" type="number" value="<?php echo $row_esp['cd_especialidade']; ?>" name="frm_cd_especialidade" hidden>
 
