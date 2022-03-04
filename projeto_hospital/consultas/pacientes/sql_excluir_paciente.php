@@ -8,27 +8,27 @@
 
     //CADA ../ SIGNIFICA VOLTAR UMA PASTA PARA TRAS   
 
-    //BUSCANDO DADOS DO ESPECIALIADE VIA _POST
-    $var_cd_especialiade = $_POST['frm_cd_especialidade'];    
+    //BUSCANDO DADOS DO PACIENTE VIA _POST
+    $var_cd_paciente = $_POST['frm_cd_paciente'];    
 
     //PRIMEIRO PASSO PARA INSERIR DADOS
     //FAZER A CONSULTA DO INSERT
-    $excluir_especialidade = "DELETE FROM hospital.ESPECIALIDADE WHERE cd_especialidade = '$var_cd_especialidade'";
+    $excluir_paciente = "DELETE FROM hospital.PACIENTE WHERE cd_paciente = '$var_cd_paciente'";
 
     //SEGUNDO PASSO
     //JUNTAR AS INFORMACOES DA CONEXAO + A CONSULTA
-    $valida_exclusao_especialidade = mysqli_query($conexao, $excluir_especialidade);
+    $valida_exclusao_paciente = mysqli_query($conexao, $excluir_paciente);
     //OBS a variavel $conexao é a mesma do conexao.php
 
     //VALIDANDO SE OS DADOS FORAM CORRETAMENTE INSERIDOS
-    if(!$valida_exclusao_especialidade){
+    if(!$valida_exclusao_paciente){
         //CRIANDO SESSAO MENSAGEM
-        $_SESSION['msg_execucao'] = 'Erro na exclusão do especialidade.';        
-        header('Location: ../../especialidades.php');
+        $_SESSION['msg_execucao'] = 'Erro na exclusão do paciente.';        
+        header('Location: ../../pacientes.php');
     }else{
         //CRIANDO SESSAO MENSAGEM
-        $_SESSION['msg_execucao'] = 'Especialidade excluida com sucesso!';   
-        header('Location: ../../especialidades.php');
+        $_SESSION['msg_execucao'] = 'Paciente excluido com sucesso!';   
+        header('Location: ../../pacienteses.php');
     }
 
 

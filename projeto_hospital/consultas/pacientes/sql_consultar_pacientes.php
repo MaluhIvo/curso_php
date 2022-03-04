@@ -2,13 +2,13 @@
 
     //PRIMEIRO PASSO PARA BUSCAR DADOS
     //FAZER A CONSULTA DO SELECT
-    $consulta_especialidades = "SELECT cd_especialidade, nm_especialidade, sn_sus
-                           FROM hospital.ESPECIALIDADE
-                           ORDER BY cd_especialidade DESC";
+    $consulta_paciente = "SELECT cd_paciente, nm_paciente, sexo, dt_nascimento
+                           FROM hospital.PACIENTE
+                           ORDER BY cd_paciente DESC";
 
     //SEGUNDO PASSO
     //JUNTAR AS INFORMACOES DA CONEXAO + A CONSULTA
-    $resultado_especialidades = mysqli_query($conexao, $consulta_especialidades);
+    $resultado_paciente = mysqli_query($conexao, $consulta_paciente);
     //OBS a variavel $conexao é a mesma do conexao.php
 
 ?>
